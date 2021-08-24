@@ -5,7 +5,7 @@ import { teaArray } from '../products/teas.js';
 
 
 for (let item of cartArray) {
-    let renderTR = renderCart(item);
+    
     const tableBody = document.querySelector('#tablebody');
-    tableBody.append(renderTR);
+    tableBody.append(renderCart(item));
 }

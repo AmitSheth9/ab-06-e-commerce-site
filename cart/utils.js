@@ -6,9 +6,7 @@ export function findById(productArray, id) {
         if (item.id === id) {
             return item;
         }
-        else {
-            return null;
-        }
+       
     }
 }
 
