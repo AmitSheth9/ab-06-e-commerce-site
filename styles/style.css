@@ -1,7 +1,14 @@
 
-#mainpagelink {
-    margin-left: 200px;
-    font-size: 25px;
-    margin-top: 300px;
-    padding-top: 200px;
+
+
+#container {
+    display: block;
+    font-size: 30px;
+    color: light green;
+    
+}
+
+#header {
+    font-size: 40px;
+    color: olivedrab;
 }
