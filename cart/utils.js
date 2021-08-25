@@ -1,5 +1,5 @@
 
-
+import { cartArray } from './cart.js';
 
 export function findById(productArray, id) {
     for (let item of productArray) {
@@ -27,4 +27,29 @@ export function calcOrderTotal(shopArray, productArray) {
     }
     return accumulator.toLocaleString('en-US',
         { style: 'currency', currency: 'USD' });
+}
+
+
+export function setCart(cartArray) {
+    let stringCart = JSON.stringify(cartArray);
+    return localStorage.setItem(stringCart);
+}
+export function getCart(CART) {
+    const stringCart = localStorage.getItem(CART);
+    const arrayObjectCart = JSON.parse(stringCart);
+    return arrayObjectCart;
+}
+
+export function addItemToCart(productItem) {
+    let currentCart = getCart(cartArray);
+
+    for (let cartItem of cartArray) {   
+        if (productItem.id === cartItem.id) {
+            cartItem.quantity++;
+        }
+        else {
+            currentCart.push({ id: productItem.id, quantity: 1 });
+        }
+    }
+    console.log(cartArray);
 }

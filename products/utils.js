@@ -1,11 +1,12 @@
 
 
 import { teaArray } from './teas.js';
+import { addItemToCart } from '../cart/utils.js';
 
 
 export function renderTea(teaObject) {
     const liEl = document.createElement('li');
-    const productCard = document.cr eateElement('div');
+    const productCard = document.createElement('div');
     const productName = document.createElement('div');
     const productImage = document.createElement('img');
     const productDescription = document.createElement('div');
@@ -29,6 +30,14 @@ export function renderTea(teaObject) {
     productDescription.textContent = teaObject.description;
     price.textContent = `Price: $${teaObject.price}`;
     addButton.textContent = `Add ${teaObject.name} to cart`;
-    return liEl;
+    
 
+    addButton.addEventListener('click', () => {
+        alert(`You have added ${teaObject.name} to cart`);
+        addItemToCart(teaObject);
+        
+
+
+    });
+    return liEl;
 }

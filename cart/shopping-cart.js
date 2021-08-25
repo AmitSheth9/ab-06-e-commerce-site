@@ -14,3 +14,4 @@ for (let item of cartArray) {
 let orderTotal = calcOrderTotal(cartArray, teaArray);
 const cartTotal = document.getElementById('footertotal');
 cartTotal.textContent = `Total: ${orderTotal}`;
+
