@@ -15,3 +15,16 @@ export function calcItemTotal(quantity, cost) {
     return itemTotal;
 
 }
+
+export function calcOrderTotal(shopArray, productArray) {
+    let accumulator = 0;
+    for (let item of shopArray) {
+        let product = findById(productArray, item.id);
+        let itemTotal = calcItemTotal(item.quantity, product.price);
+        
+        accumulator = accumulator + itemTotal;
+        
+    }
+    return accumulator.toLocaleString('en-US',
+        { style: 'currency', currency: 'USD' });
+}

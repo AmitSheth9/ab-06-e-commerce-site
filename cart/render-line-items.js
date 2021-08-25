@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { findById } from './utils.js';
 import { cartArray } from './cart.js';
 import { calcItemTotal } from './utils.js';
@@ -11,13 +12,18 @@ export function renderCart(cartItem) {
     const itemTR = document.createElement('tr');
     
     
+    
     const product = findById(teaArray, cartItem.id);
     console.log(product);
     itemTD.textContent = product.name;
-    priceTD.textContent = product.price;
+    priceTD.textContent = `$${product.price}`;
     quantityTD.textContent = cartItem.quantity;
-    itemCostTD.textContent = calcItemTotal(cartItem.quantity, product.price);
-
+    
+    itemTD.classList.add('itemclass');
+    let itemTotal = calcItemTotal(cartItem.quantity, product.price);
+    
+    itemCostTD.textContent = itemTotal.toLocaleString('en-US',
+        { style: 'currency', currency: 'USD' });
     
     
     

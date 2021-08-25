@@ -1,0 +1,32 @@
+
+
+table {
+    border: 2px solid black;
+    width: 75%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+thead {
+    background-color: lightgreen;
+    font-size: 30px;
+    
+}
+
+td {
+    
+    background-color: beige;
+    font-size: 26px;
+    text-align: center;
+    border: solid brown 2px;
+    padding: 4px 4px
+}
+
+#footertotal {
+    font-size: 29px;
+    font-family: bold;
+}
+
+.itemclass {
+    text-align: left;
+}
