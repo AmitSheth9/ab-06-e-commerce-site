@@ -5,7 +5,7 @@ import { teaArray } from './teas.js';
 
 export function renderTea(teaObject) {
     const liEl = document.createElement('li');
-    const productCard = document.createElement('div');
+    const productCard = document.cr eateElement('div');
     const productName = document.createElement('div');
     const productImage = document.createElement('img');
     const productDescription = document.createElement('div');

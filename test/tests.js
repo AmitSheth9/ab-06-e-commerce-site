@@ -1,26 +1,14 @@
-import { renderTea } from '../utils.js';
-import { teaArray } from '../product.js';
+import { renderCart } from '../cart/render-line-items.js';
+import { cartArray } from '../cart/cart.js';
 
 const test = QUnit.test;
 
 test('test if renderTea outputs the same format as static HTML', (expect) => {
 
-    const expected = `<li>
-    <div class="productcard">
-    <div class="productname">Green Tea</div>
-    <img class="productimage" src="../assets/greentea.jpeg">
-    <div class="productdescription">High in antioxidants and improves brain function</div>
-    <div class="price">Price: $4.99</div><button class="buybutton" type="button">Add Green Tea to cart</button>\n            </div>\n        </li>`;
+    const expected = "<tr><td class=\"itemclass\">Green Tea</td><td>$4.99</td><td>5</td><td>$24.95</td></tr>";
 
-    const actual = renderTea ({
-        id: 'green',
-        name: 'Green Tea',
-        image: '../assets/greentea3.jpeg',
-        description: 'High in antioxidants, improves brain function.',
-        category: 'healthy',
-        price: 4.99
-    });
+    const actual = renderCart(cartArray[0]);
 
 
-    expect.equal(actual, expected);
+    expect.equal(actual.outerHTML, expected);
 });
