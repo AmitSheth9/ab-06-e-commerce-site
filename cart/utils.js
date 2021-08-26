@@ -58,3 +58,5 @@ export function addItemToCart(productItem) {
 
     setCart(currentCart);
 }
+
+//export function clearCart

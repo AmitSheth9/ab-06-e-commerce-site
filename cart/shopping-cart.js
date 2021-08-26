@@ -21,7 +21,19 @@ const placeOrderBtn = document.getElementById('placeorderbtn');
 let string = '';
 placeOrderBtn.addEventListener('click', () => {
     console.log(JSON.stringify(cart, true, 2));
-    alert(JSON.stringify(cart, true, 2));
+    alert(`Thank you for placing your order! ${JSON.stringify(cart, true, 2)}`);
     localStorage.removeItem('cart');
 
+});
+
+if (cart.length === 0)  {
+    placeOrderBtn.disable = true;
+    placeOrderBtn.style.color = 'gray';
+}
+
+const shopAgainBtn = document.getElementById('shopagainbtn');
+
+
+shopAgainBtn.addEventListener('click', () => {
+    window.location = '../products/product.html';
 });
