@@ -35,5 +35,5 @@ const shopAgainBtn = document.getElementById('shopagainbtn');
 
 
 shopAgainBtn.addEventListener('click', () => {
-    window.location = './products/product.html';
+    window.location = '../products/product.html';
 });

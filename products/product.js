@@ -12,5 +12,5 @@ for (let tea of teaArray) {
 const proceedButton = document.getElementById('proceedbutton');
 
 proceedButton.addEventListener('click', () => {
-    window.location = './cart/cart.html';
+    window.location = '../cart/cart.html';
 });
