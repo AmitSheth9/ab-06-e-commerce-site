@@ -8,3 +8,9 @@ for (let tea of teaArray) {
     const li = renderTea(tea);
     ulEl.append(li);
 }
+
+const proceedButton = document.getElementById('proceedbutton');
+
+proceedButton.addEventListener('click', () => {
+    window.location = '../cart/cart.html';
+});
