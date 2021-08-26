@@ -1,7 +1,8 @@
 
 
 import { teaArray } from './teas.js';
-import { addItemToCart } from '../cart/utils.js';
+import { addItemToCart, setCart } from '../cart/utils.js';
+import { cartArray } from '../cart/cart.js';
 
 
 export function renderTea(teaObject) {
@@ -34,6 +35,7 @@ export function renderTea(teaObject) {
 
     addButton.addEventListener('click', () => {
         alert(`You have added ${teaObject.name} to cart`);
+
         addItemToCart(teaObject);
         
 
