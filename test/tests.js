@@ -2,6 +2,7 @@ import { renderCart } from '../cart/render-line-items.js';
 import { cartArray } from '../cart/cart.js';
 import { calcOrderTotal, findById } from '../cart/utils.js';
 import { teaArray } from '../products/teas.js';
+import { getCart } from '../cart/utils.js';
 
 const test = QUnit.test;
 
@@ -36,4 +37,10 @@ test('test if renderTea outputs the same format as static HTML', (expect) => {
 
 
     expect.equal(actual.outerHTML, expected);
+});
+
+test('getCart to make sure it returns cart', (expect) => {
+    const expected = [{ id: 101, quantity: 4 }, { id:104, quantity: 6 }];
+
+    const actual = 
 });

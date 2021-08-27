@@ -23,6 +23,7 @@ placeOrderBtn.addEventListener('click', () => {
     console.log(JSON.stringify(cart, true, 2));
     alert(`Thank you for placing your order! ${JSON.stringify(cart, true, 2)}`);
     localStorage.removeItem('cart');
+    location.reload();
 
 });
 
