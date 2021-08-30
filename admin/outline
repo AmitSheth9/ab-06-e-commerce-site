@@ -1,0 +1,10 @@
+build admin page which allows to store products into local storage
+
+//so use form with input boxes look up the syntax think we need labels and value name and id
+
+//after entering all the info when they click submit button it creates object with those characteristics stores it in localStorage after converting to string. or do we store it into array first? will see
+    -create object how? using the input data as value to keys already existing. or using constructor function?
+
+    - then we have to store it in local storage by stringifying and setting it to local storage
+
+but first we will want to displauy it. can probably do that using our productrender function

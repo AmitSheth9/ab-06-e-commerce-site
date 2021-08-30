@@ -44,9 +44,9 @@ export function getCart() {
 }
 
 export function addItemToCart(productItem) {
-    let currentCart = getCart();
+    const currentCart = getCart();
     
-    let cartItem = findById(currentCart, productItem.id);
+    const cartItem = findById(currentCart, productItem.id);
     
     if (!cartItem) {
         currentCart.push({ id: productItem.id, quantity: 1 });
@@ -59,4 +59,7 @@ export function addItemToCart(productItem) {
     setCart(currentCart);
 }
 
-//export function clearCart
+export function clearCart() {
+    localStorage.removeItem('cart');
+    location.reload();
+}
