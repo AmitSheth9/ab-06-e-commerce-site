@@ -1,5 +1,7 @@
 
-
+body {
+    background: beige;
+}
 
 #container {
     display: block;
@@ -11,4 +13,17 @@
 #header {
     font-size: 40px;
     color: olivedrab;
+}
+
+#homepagepic {
+    padding: 20px 20px 20px 20px;
+    border: 5px solid brown;
+    height: 40%;
+    width: 40%;
+    background-color: beige;
+}
+
+#homepagequote {
+    padding: 5px;
+    
 }
