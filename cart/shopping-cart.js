@@ -1,33 +1,32 @@
 
 import { cartArray } from './cart.js';
-import { getCart } from './utils.js';
+import { clearCart, getCart } from './utils.js';
 import { renderCart } from './render-line-items.js';
 import { teaArray } from '../products/teas.js';
 import { calcOrderTotal } from './utils.js';
+import { getProducts } from '../admin/adminutils.js';
 
-
+const products = getProducts();
 const cart = getCart();
-for (let item of cart) {
+for (let teaitem of cart) {
     
     const tableBody = document.querySelector('#tablebody');
 
-    tableBody.append(renderCart(item));
+    tableBody.append(renderCart(teaitem));
 }
-let orderTotal = calcOrderTotal(cart, teaArray);
+let orderTotal = calcOrderTotal(cart, products);
 const cartTotal = document.getElementById('footertotal');
 cartTotal.textContent = `Total: ${orderTotal}`;
 
 const placeOrderBtn = document.getElementById('placeorderbtn');
-let string = '';
+
 placeOrderBtn.addEventListener('click', () => {
-    console.log(JSON.stringify(cart, true, 2));
     alert(`Thank you for placing your order! ${JSON.stringify(cart, true, 2)}`);
-    localStorage.removeItem('cart');
-    location.reload();
+    clearCart();
 
 });
 
-if (cart.length === 0)  {
+if (cart.length === 0) {
     placeOrderBtn.disable = true;
     placeOrderBtn.style.color = 'gray';
 }
