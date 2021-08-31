@@ -1,8 +1,9 @@
 
 import { teaArray } from './teas.js';
 import { renderTea } from './utils.js';
-import { getProducts } from '../admin/adminutils.js';
+import { getProducts, setProducts } from '../admin/adminutils.js';
 
+const setDefaultProducts = setProducts(teaArray);
 const products = getProducts();
 const ulEl = document.getElementById('productlist');
 

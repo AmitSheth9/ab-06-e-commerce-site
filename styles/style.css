@@ -1,5 +1,7 @@
 
-
+body {
+    background: rgb(241, 209, 139);
+}
 
 #container {
     display: block;
@@ -10,5 +12,22 @@
 
 #header {
     font-size: 40px;
-    color: olivedrab;
+    color: brown;
+}
+
+#homepagepic {
+    padding: 20px 20px 20px 20px;
+    border: 5px solid brown;
+    height: 36%;
+    width: 36%;
+    background-color: beige;
+}
+
+#homepagequote {
+    padding: 5px;
+    
+}
+
+div a {
+    color: rgb(136, 95, 20);
 }
