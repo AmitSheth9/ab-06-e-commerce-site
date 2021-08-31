@@ -2,7 +2,7 @@ import { teaArray } from '../products/teas.js';
 import { renderTea } from '../products/utils.js';
 import { addToProducts, setProducts } from './adminutils.js';
 
-setProducts(teaArray);
+
 const form = document.getElementById('productform');
 
 
@@ -21,12 +21,12 @@ form.addEventListener('submit', (event) => {
 
     
     addToProducts(productObject);
-    
+    window.location = '../products/product.html';
     
 });
    
 
-    //window.location = '../products/product.html';
+    //
 
 
 

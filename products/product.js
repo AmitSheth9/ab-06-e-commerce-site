@@ -3,7 +3,7 @@ import { teaArray } from './teas.js';
 import { renderTea } from './utils.js';
 import { getProducts, setProducts } from '../admin/adminutils.js';
 
-const setDefaultProducts = setProducts(teaArray);
+setProducts(teaArray);
 const products = getProducts();
 const ulEl = document.getElementById('productlist');
 
