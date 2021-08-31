@@ -5,6 +5,7 @@ import { calcItemTotal } from './utils.js';
 import { teaArray } from '../products/teas.js';
 import { getProducts } from '../admin/adminutils.js';
 
+
 const products = getProducts();
 
 export function renderCart(cartItem) {

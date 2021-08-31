@@ -13,6 +13,7 @@ body {
 #header {
     font-size: 40px;
     color: brown;
+    font-weight:bolder;
 }
 
 #homepagepic {
@@ -20,14 +21,14 @@ body {
     border: 5px solid brown;
     height: 36%;
     width: 36%;
-    background-color: beige;
+    background-color: rgb(241, 209, 139);
 }
 
 #homepagequote {
     padding: 5px;
-    
+    color: brown;
 }
 
 div a {
-    color: rgb(136, 95, 20);
+    color: brown;
 }
